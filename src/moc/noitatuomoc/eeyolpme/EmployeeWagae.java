@@ -14,15 +14,15 @@ public class EmployeeWagae {
 
 		Random random = new Random();
 		int randomNumber = random.nextInt(3);
-		if (randomNumber == 1) {
-			System.out.println("Employee is present Full Day  ");
+		switch (randomNumber) {
+		case 1:System.out.println("Employee is present Full Day  ");
 			Salary = PerhourWage * FullDay;
-		} else if (randomNumber == 2) {
-			System.out.println("Employee is Working Half Day only ");
+			break;
+		case 2:System.out.println("Employee is Working Half Day only ");
 			Salary = PerhourWage * HalfDay;
-		} else
-			System.out.println("Employee is Absent Today ");
-		System.out.println("Employee Salary is :" + Salary);
-	}
-
+			break;
+		case 0:System.out.println("Employee is Absent Today ");
+		}
+	System.out.println("Employee Salary is :" + Salary);
+}
 }
