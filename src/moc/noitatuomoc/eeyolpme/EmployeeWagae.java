@@ -11,18 +11,33 @@ public class EmployeeWagae {
 		int FullDay = 8;
 		int Salary = 0;
 		int HalfDay = 4;
-
-		Random random = new Random();
-		int randomNumber = random.nextInt(3);
-		switch (randomNumber) {
-		case 1:System.out.println("Employee is present Full Day  ");
+        int WorkingDayPerMonth=20;
+        int monthlySalary=0;
+        
+        Random random = new Random();
+	   int randomNumber = random.nextInt(3);
+		
+	   
+	   for ( int i=1 ; i<= WorkingDayPerMonth ; i++)
+	   {
+	   switch (randomNumber) {
+		case 1:
+			System.out.println("Employee is present Full Day  ");
 			Salary = PerhourWage * FullDay;
 			break;
-		case 2:System.out.println("Employee is Working Half Day only ");
+		case 2:
+			System.out.println("Employee is Working Half Day only ");
 			Salary = PerhourWage * HalfDay;
 			break;
-		case 0:System.out.println("Employee is Absent Today ");
+		case 0:
+			System.out.println("Employee is Absent Today ");
 		}
-	System.out.println("Employee Salary is :" + Salary);
-}
-}
+	   
+	   monthlySalary =monthlySalary+Salary;
+	  
+	}
+	   System.out.println("Employee MonthlySalary is :" + monthlySalary);
+	}	
+	}
+	
+
